@@ -1,5 +1,6 @@
 # Batch-execute-huawei-vrp
 Automate command execution on all managed huawei devices using python
+
 1- Before running the script, insure that these modules are installed:
    - pip install paramiko
    - pip install netmiko
