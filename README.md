@@ -13,3 +13,4 @@ Automate command execution on all managed huawei devices using python
     - Paste devices credentials that you copied from the excel template, then hit CTRL+Z and Enter
     - Paste or write the commands to be executed on the devices, then hit CTRL+Z and Enter
     - The commands outputs and session logs are saved in **scripts_Outputs**
+4- For other scripts, just paste devices credentials then hit CTRL+Z and Enter
