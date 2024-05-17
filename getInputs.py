@@ -14,7 +14,15 @@ def getInputs(outputDir, curfilename):
 	credentials = []
 	for info in devices_lst:
 		creds = [dev.split('***') for dev in info.split('\n') if dev != '']
-		Foldername = 'Output'
+		if len(devices_lst) == 1: Foldername = 'Output'
+		else:
+			if any(i in str(creds).lower() for i in ['oob','eor','tor','ce']): Foldername = 'Switches'
+			elif 'ne' in str(creds).lower(): Foldername = 'Routers'
+			elif 'fw' in str(creds).lower(): Foldername = 'Firewalls'
+			else: Foldername = 'Output'
 		os.mkdir(Foldername)
 		credentials += [{'NE_Name': tup[0], 'host': tup[1], "password": tup[2], "username": tup[3], "Foldername": Foldername}  for tup in creds]
 	return credentials
+
+# from autom.getInputs import getInputs
+# credentials = getInputs('Z:\\Ed\\Portable_python\\scripts_Outputs\\', os.path.basename(__file__)[:-3])

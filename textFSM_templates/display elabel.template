@@ -1,0 +1,23 @@
+Value BoardType (\S*)
+Value BarCode (\S*)
+Value Item (\S*)
+Value Description (.*)
+Value Manufactured (.*)
+Value VendorName (.*)
+Value IssueNumber (.*)
+Value CLEICode (.*)
+Value BOM (.*)
+Value Model (\S*)
+
+Start
+  ^BoardType=${BoardType}
+  ^BarCode=${BarCode}
+  ^Item=${Item}
+  ^Description=${Description}
+  ^Manufactured=${Manufactured}
+  ^VendorName=${VendorName}
+  ^IssueNumber=${IssueNumber}
+  ^CLEICode=${CLEICode}
+  ^BOM=${BOM}
+  ^Model=${Model}
+  ^ -> Record

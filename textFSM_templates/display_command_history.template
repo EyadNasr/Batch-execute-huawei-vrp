@@ -1,0 +1,12 @@
+Value user (\S+)
+Value VTY_Interface (\S+)
+Value User_IP (\S+)
+Value DATE (\S+)
+Value TIME (\S+)
+Value Command (.+)
+
+
+Start
+  ^User *: *${user} *, *${VTY_Interface} *, *${User_IP}
+  ^Time *: *${DATE} *${TIME}
+  ^Command *: *${Command} -> Record

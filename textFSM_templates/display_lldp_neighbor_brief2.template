@@ -1,0 +1,7 @@
+Value Local_Interface (\S*)
+Value Neighbor_Device (\S*)
+Value Neighbor_Interface (\S*)
+Value Exptime_sec (\d*)
+
+Start
+  ^${Local_Interface} +${Exptime_sec} +${Neighbor_Interface} +${Neighbor_Device} -> Record

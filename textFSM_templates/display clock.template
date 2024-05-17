@@ -1,0 +1,26 @@
+Value Date ([\d-]+)
+Value Time ([\d:+]+)
+Value Day (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)
+Value TimeZone_Name (.+)
+Value TimeZone (\S+)
+Value DST_Name (.+)
+Value DST_Repeat_Mode (.+)
+Value DST_start_year (\S+)
+Value DST_end_year (\S+)
+Value DST_start_time (.+)
+Value DST_end_time (.+)
+Value DST_saving_time (\S+)
+
+
+Start
+  ^[ \t]*${Date}[ \t]*${Time}
+  ^[ \t]*${Day}
+  ^[ \t]*Time Zone\(${TimeZone_Name}\)[ \t]*:[ \t]*${TimeZone}
+  ^[ \t]*Daylight saving time[ \t]*:
+  ^[ \t]*Name[ \t]*:[ \t]*${DST_Name}
+  ^[ \t]*Repeat mode[ \t]*:[ \t]*${DST_Repeat_Mode}
+  ^[ \t]*Start year[ \t]*:[ \t]*${DST_start_year}
+  ^[ \t]*End year[ \t]*:[ \t]*${DST_end_year}
+  ^[ \t]*Start time[ \t]*:[ \t]*${DST_start_time}
+  ^[ \t]*End time[ \t]*:[ \t]*${DST_end_time}
+  ^[ \t]*Saving time[ \t]*:[ \t]*${DST_saving_time} -> Record

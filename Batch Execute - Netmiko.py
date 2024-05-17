@@ -41,7 +41,7 @@ def mainCode(remote, counter):
 			output += shell.send_command_timing(command, strip_prompt=False, strip_command=False, read_timeout=0)
 			time.sleep(1)
 		device_Sysname = shell.find_prompt().split('<')[-1].strip('>')
-		print(f"Device name: {device_Sysname}, Success")
+		print(f"Device name: {device_Sysname} {remote['host']}, Success")
 		counter += 1
 	except Exception as e:
 		# Handle unexpected exceptions
