@@ -4,6 +4,8 @@ Automate command execution on all managed huawei devices using python
 1- Before running the script, insure that these modules are installed:
    - pip install paramiko
    - pip install netmiko
+   - pip install openpyxl
+   - pip install textfsm
 
 2- Use the devices.xlsx template as a reference for your devices credentials
 
